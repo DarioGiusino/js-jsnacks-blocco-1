@@ -9,11 +9,16 @@ const result = document.getElementById('sum');
 // aggancio evento al click del button
 button.addEventListener('click', function(){
     // prendo valore dell'input
+    const userInput = inputField.value;
 
     // separo il valore in singoli fattori
+    const numbers = userInput.split('');
+    console.log(numbers);
 
     // sommo i fattori
+    const sum = parseInt(numbers[0]) + parseInt(numbers[1]) + parseInt(numbers[2]) + parseInt(numbers[3]);
 
     // stampo su pagina il risultato
+    result.innerText = sum;
 });
 
