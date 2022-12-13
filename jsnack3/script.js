@@ -16,7 +16,11 @@ button.addEventListener('click', function(){
     console.log(numbers);
 
     // sommo i fattori
-    const sum = parseInt(numbers[0]) + parseInt(numbers[1]) + parseInt(numbers[2]) + parseInt(numbers[3]);
+    let sum = 0;
+
+    for (i = 0; i < numbers.length; i++){
+        sum += parseInt(numbers[i]);
+    }
 
     // stampo su pagina il risultato
     result.innerText = sum;
