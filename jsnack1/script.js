@@ -1,15 +1,26 @@
 /* SNACK 1
 Il software deve chiedere per 10 volte all’utente di inserire un numero. (qui potete usare un prompt). Il programma stampa la somma di tutti i numeri inseriti. */
 
+// definisco lista da riempire e recupero campo dal dom
 const numbers = []
-const sum = document.getElementById('sum');
+const result = document.getElementById('result');
 
+// chiedo 10 numeri all'utente
 for (i = 0; i < 10; i++){
     const userNumber = parseInt(prompt('Inserisci un numero').trim());
     console.log(userNumber);
 
+    // inserisco i numeri nella lista
     numbers.push(userNumber);
 }
 console.log(numbers);
 
-sum.innerText = numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + numbers[7] + numbers[8] + numbers[9];
+// sommo i valori nella lista
+let sum = 0;
+
+for (i = 0; i < numbers.length; i++){
+    sum += numbers[i];
+}
+
+// li stampo nel campo del dom
+result.innerText = sum;
