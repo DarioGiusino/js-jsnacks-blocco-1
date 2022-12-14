@@ -18,7 +18,7 @@ button.addEventListener('click', function(){
     // sommo i fattori
     let sum = 0;
 
-    for (i = 0; i < numbers.length; i++){
+    for (let i = 0; i < numbers.length; i++){
         sum += parseInt(numbers[i]);
     }
 
