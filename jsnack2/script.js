@@ -20,7 +20,7 @@ verifyButton.addEventListener('click', function(){
     // controllo nella mia lista se esistente
     let isAuth = false;
 
-    for (i = 0; !isAuth && i < partecipants.length; i++){
+    for (let i = 0; !isAuth && i < partecipants.length; i++){
         const currentName = partecipants[i];
 
         if (currentName === userName){
